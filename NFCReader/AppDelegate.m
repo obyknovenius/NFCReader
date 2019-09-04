@@ -6,7 +6,13 @@
 //  Copyright © 2019 Vitaly Dyachkov. All rights reserved.
 //
 
+#import <CoreNFC/CoreNFC.h>
+
 #import "AppDelegate.h"
+
+#import "ViewController.h"
+
+#import "NFCReader.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +26,23 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
+    if (![userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+        return NO;
+    }
+
+    NFCNDEFMessage *message = userActivity.ndefMessagePayload;
+
+    NSString *text = [NFCReader readMessage:message];
+    if (text == nil) {
+        return NO;
+    }
+
+    ViewController *viewController = (ViewController *)self.window.rootViewController;
+    [viewController.label setText:text];
+
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

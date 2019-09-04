@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B770C1D1231FE4F600506006 /* NFCReader.m in Sources */ = {isa = PBXBuildFile; fileRef = B770C1D0231FE4F600506006 /* NFCReader.m */; };
+		B778207A2316C0130021B548 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77820792316C0130021B548 /* Photos.framework */; };
 		B79F59FB231405440010AE28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B79F59FA231405440010AE28 /* AppDelegate.m */; };
 		B79F59FE231405440010AE28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79F59FD231405440010AE28 /* ViewController.m */; };
 		B79F5A01231405440010AE28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79F59FF231405440010AE28 /* Main.storyboard */; };
 		B79F5A03231405460010AE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79F5A02231405460010AE28 /* Assets.xcassets */; };
 		B79F5A06231405460010AE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79F5A04231405460010AE28 /* LaunchScreen.storyboard */; };
 		B79F5A09231405460010AE28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B79F5A08231405460010AE28 /* main.m */; };
+		B79F5A11231405CB0010AE28 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B79F5A10231405CB0010AE28 /* CoreNFC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B770C1CF231FE4F600506006 /* NFCReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFCReader.h; sourceTree = "<group>"; };
+		B770C1D0231FE4F600506006 /* NFCReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCReader.m; sourceTree = "<group>"; };
+		B77820792316C0130021B548 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		B79F59F6231405440010AE28 /* NFCReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79F59F9231405440010AE28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B79F59FA231405440010AE28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		B79F5A05231405460010AE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79F5A07231405460010AE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B79F5A08231405460010AE28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B79F5A10231405CB0010AE28 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
+		B79F5A1223140A110010AE28 /* NFCReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCReader.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B778207A2316C0130021B548 /* Photos.framework in Frameworks */,
+				B79F5A11231405CB0010AE28 /* CoreNFC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +54,7 @@
 			children = (
 				B79F59F8231405440010AE28 /* NFCReader */,
 				B79F59F7231405440010AE28 /* Products */,
+				B79F5A0F231405CB0010AE28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +69,7 @@
 		B79F59F8231405440010AE28 /* NFCReader */ = {
 			isa = PBXGroup;
 			children = (
+				B79F5A1223140A110010AE28 /* NFCReader.entitlements */,
 				B79F59F9231405440010AE28 /* AppDelegate.h */,
 				B79F59FA231405440010AE28 /* AppDelegate.m */,
 				B79F59FC231405440010AE28 /* ViewController.h */,
@@ -67,8 +79,19 @@
 				B79F5A04231405460010AE28 /* LaunchScreen.storyboard */,
 				B79F5A07231405460010AE28 /* Info.plist */,
 				B79F5A08231405460010AE28 /* main.m */,
+				B770C1CF231FE4F600506006 /* NFCReader.h */,
+				B770C1D0231FE4F600506006 /* NFCReader.m */,
 			);
 			path = NFCReader;
+			sourceTree = "<group>";
+		};
+		B79F5A0F231405CB0010AE28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B77820792316C0130021B548 /* Photos.framework */,
+				B79F5A10231405CB0010AE28 /* CoreNFC.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +125,14 @@
 				TargetAttributes = {
 					B79F59F5231405440010AE28 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B770C1D1231FE4F600506006 /* NFCReader.m in Sources */,
 				B79F59FE231405440010AE28 /* ViewController.m in Sources */,
 				B79F5A09231405460010AE28 /* main.m in Sources */,
 				B79F59FB231405440010AE28 /* AppDelegate.m in Sources */,
@@ -285,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCReader/NFCReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8E8DJGBGN6;
 				INFOPLIST_FILE = NFCReader/Info.plist;
@@ -302,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCReader/NFCReader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8E8DJGBGN6;
 				INFOPLIST_FILE = NFCReader/Info.plist;
