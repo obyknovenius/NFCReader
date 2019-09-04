@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70DB1F12320010700C9ECDD /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B70DB1F02320010700C9ECDD /* DownloadManager.m */; };
 		B770C1D1231FE4F600506006 /* NFCReader.m in Sources */ = {isa = PBXBuildFile; fileRef = B770C1D0231FE4F600506006 /* NFCReader.m */; };
 		B778207A2316C0130021B548 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77820792316C0130021B548 /* Photos.framework */; };
 		B79F59FB231405440010AE28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B79F59FA231405440010AE28 /* AppDelegate.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B70DB1EF2320010700C9ECDD /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		B70DB1F02320010700C9ECDD /* DownloadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		B770C1CF231FE4F600506006 /* NFCReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NFCReader.h; sourceTree = "<group>"; };
 		B770C1D0231FE4F600506006 /* NFCReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NFCReader.m; sourceTree = "<group>"; };
 		B77820792316C0130021B548 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -81,6 +84,8 @@
 				B79F5A08231405460010AE28 /* main.m */,
 				B770C1CF231FE4F600506006 /* NFCReader.h */,
 				B770C1D0231FE4F600506006 /* NFCReader.m */,
+				B70DB1EF2320010700C9ECDD /* DownloadManager.h */,
+				B70DB1F02320010700C9ECDD /* DownloadManager.m */,
 			);
 			path = NFCReader;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				B770C1D1231FE4F600506006 /* NFCReader.m in Sources */,
 				B79F59FE231405440010AE28 /* ViewController.m in Sources */,
 				B79F5A09231405460010AE28 /* main.m in Sources */,
+				B70DB1F12320010700C9ECDD /* DownloadManager.m in Sources */,
 				B79F59FB231405440010AE28 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

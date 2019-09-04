@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qb7-EJ-ZPc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,35 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fy-in-F3Q">
-                                <rect key="frame" x="189.5" y="433" width="35" height="30"/>
-                                <state key="normal" title="Read"/>
-                                <connections>
-                                    <action selector="read:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfY-Qm-oxc"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owg-bt-5ft">
-                                <rect key="frame" x="207" y="425" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="beT-xJ-lFG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="owg-bt-5ft" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4MW-O4-6Nr"/>
-                            <constraint firstItem="3Fy-in-F3Q" firstAttribute="top" secondItem="owg-bt-5ft" secondAttribute="bottom" constant="8" symbolic="YES" id="JBQ-OF-oZL"/>
-                            <constraint firstItem="3Fy-in-F3Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Py8-3w-Neo"/>
-                            <constraint firstItem="3Fy-in-F3Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U7f-ef-1wc"/>
+                            <constraint firstItem="beT-xJ-lFG" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Kg0-HP-7C8"/>
+                            <constraint firstItem="beT-xJ-lFG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WfN-xZ-X1F"/>
+                            <constraint firstItem="beT-xJ-lFG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="kul-bS-qHe"/>
+                            <constraint firstItem="beT-xJ-lFG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rUb-4i-dLz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fva-kH-mtf">
+                        <barButtonItem key="rightBarButtonItem" title="Scan" id="BCb-u3-R86">
+                            <connections>
+                                <action selector="scan:" destination="BYZ-38-t0r" id="9NU-zj-7oK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="label" destination="owg-bt-5ft" id="Bmb-BP-dPQ"/>
+                        <outlet property="imageView" destination="beT-xJ-lFG" id="8fj-2E-hyX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U63-ff-fwa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qb7-EJ-ZPc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jL7-V8-ojq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aJH-4j-mxa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRN-zv-bCJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

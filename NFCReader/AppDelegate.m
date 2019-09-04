@@ -13,6 +13,7 @@
 #import "ViewController.h"
 
 #import "NFCReader.h"
+#import "DownloadManager.h"
 
 @interface AppDelegate ()
 
@@ -33,13 +34,18 @@
 
     NFCNDEFMessage *message = userActivity.ndefMessagePayload;
 
-    NSString *text = [NFCReader readMessage:message];
-    if (text == nil) {
+    NSURL *url = [NFCReader readURL:message];
+    if (url == nil) {
         return NO;
     }
 
-    ViewController *viewController = (ViewController *)self.window.rootViewController;
-    [viewController.label setText:text];
+    [DownloadManager downloadImage:url completionHandler:^(UIImage * _Nonnull image) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+            ViewController *viewController = (ViewController *)navigationController.topViewController;
+            [viewController setImage:image];
+        });
+    }];
 
     return YES;
 }

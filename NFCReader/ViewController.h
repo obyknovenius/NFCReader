@@ -10,7 +10,7 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UILabel *label;
+- (void)setImage:(UIImage *)image;
 
 @end
 

@@ -1,5 +1,5 @@
 //
-//  NFCReader.h
+//  DownloadManager.h
 //  NFCReader
 //
 //  Created by Vitaly Dyachkov on 9/4/19.
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NFCReader : NSObject
+@interface DownloadManager : NSObject
 
-+ (NSURL *)readURL:(NFCNDEFMessage *)message;
++ (void)downloadImage:(NSURL *)url completionHandler:(void (^)(UIImage *image))completionHandler;
 
 @end
 
